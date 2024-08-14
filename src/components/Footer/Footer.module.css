@@ -1,0 +1,64 @@
+.footer {
+  font-family: 'Montserrat';
+}
+.footer-contents {
+  padding: 130px 0 0 0;
+}
+.footer-getStarted {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.footer-getStarted > label > button {
+  padding: 14px 41px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.footer-getStarted__title {
+  padding: 0px 40px 0px 0px;
+  font-weight: 400;
+  font-size: 22px;
+}
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+.footer-nav div > ul > li {
+  padding: 10px 0;
+}
+.footer-nav div > ul > li:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.footer-nav__subscribe {
+}
+.footer-nav__subscribe > label > span {
+  line-height: 2rem;
+}
+.footer-nav__subscribe-input {
+}
+.footer-nav__subscribe-input > input {
+  padding: 20px 180px 20px 32px;
+  border-radius: 10px;
+  border: 0px;
+  outline: none;
+  box-shadow: 0px 15px 50px 0px rgba(46, 131, 158, 0.07);
+}
+.footer-nav__subscribe-input > button {
+  padding: 14px 41px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.footer-nav__services {
+}
+.footer-nav__about {
+}
+.footer-nav__help {
+}

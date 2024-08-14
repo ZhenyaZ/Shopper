@@ -1,0 +1,46 @@
+.home {
+  font-family: 'Monsterrat';
+  padding: 120px 0 60px 0px;
+}
+.home-content {
+}
+.home-latest__products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-latest__products-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 35px 0 0;
+}
+.home-latest__products-title {
+  font-weight: 600;
+  font-size: 64px;
+}
+.home-latest__products-subTitle {
+  font-weight: 400;
+  font-size: 20px;
+  padding: 30px 0 0 0;
+}
+.home-latest__products-controller {
+  padding: 50px 0 0 0;
+}
+.home-latest__products-controller > button {
+  padding: 14px 41px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
+}
+.home-latest__products-image {
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
+}

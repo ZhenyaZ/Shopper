@@ -1,78 +1,80 @@
-.header{
-    font-weight: 500;
-    font-family: 'Montserrat';
-    font-size: 16px;
+.header {
+  font-weight: 500;
+  font-family: 'Montserrat';
+  font-size: 16px;
 }
-.header-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.header-name{
-    font-family: 'Montserrat';
-    font-style: italic;
-    font-size: 40px;
+.header-name {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-size: 40px;
 }
-.header-name__green{
-    color: var(--primary-color)
+.header-name__green {
+  color: var(--primary-color);
 }
-.header-search{
+.header-search {
 }
-.header-search > input{
-    padding: 20px 180px 20px 32px;
-    border-radius: 10px;
-    border: 0px;
-    outline: none;
-    box-shadow: 0px 15px 50px 0px rgba(46, 131, 158, 0.07);
+.header-search > input {
+  padding: 20px 180px 20px 32px;
+  border-radius: 10px;
+  border: 0px;
+  outline: none;
+  box-shadow: 0px 15px 50px 0px rgba(46, 131, 158, 0.07);
 }
-.header-search > button{
-    padding: 9px 8px;
-    background: var(--primary-color);
-    color:white;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
+.header-search > button {
+  padding: 9px 8px;
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
 }
-.header-cart > button{
-    padding: 20px 34px;
-    border-radius: 30px;
-    border: 1px solid var(--primary-color);
-    background: white;
+.header-cart > button {
+  padding: 20px 34px;
+  border-radius: 30px;
+  border: 1px solid var(--primary-color);
+  background: white;
+  box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
 }
-.header-cart > button:hover{
-    background: var(--primary-color);
-    color:white;
-    cursor: pointer;
+.header-cart > button:hover {
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
 }
-.header-login > button{
-    padding: 9px 8px;
+.header-login > button {
+  padding: 9px 8px;
 }
-.header-login > button{
-    padding: 20px 34px;
-    border-radius: 30px;
-    border: 1px solid var(--primary-color);
-    background: white;
+.header-login > button {
+  padding: 20px 34px;
+  border-radius: 30px;
+  border: 1px solid var(--primary-color);
+  background: white;
+  box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
 }
-.header-login > button:hover{
-    background: var(--primary-color);
-    color:white;
-    cursor: pointer;
+.header-login > button:hover {
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
 }
 
-.nav{
-    background: var(--primary-color);
-    color:white;
-    display: flex;
-    margin-top: 60px;
+.nav {
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  margin-top: 60px;
 }
-.nav-item{
+.nav-item {
 }
 .nav-item > ul {
-display: flex;
-justify-content: space-between;
-    
+  display: flex;
+  justify-content: space-between;
 }
-.nav-item > ul > li{
-    padding: 28px 75px;
-    cursor: pointer;
+.nav-item > ul > li {
+  padding: 28px 75px;
+  cursor: pointer;
 }

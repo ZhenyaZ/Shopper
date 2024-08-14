@@ -1,31 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
-  --primary-color: #10B981;
-  --secondary-color: #845EC2;
-  --tertiary-color: #D7E8F0;
-  --quaternary-color: #2E839E;
-
+:root {
+  --primary-color: #10b981;
+  --secondary-color: #845ec2;
+  --tertiary-color: #d7e8f0;
+  --quaternary-color: #2e839e;
 }
-#root{
+#root {
+  width: 100%;
+  height: 100%;
   padding: 60px 0;
 }
 /* GLOBAL STYLES */
-.wrapper{
+.wrapper {
   min-height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
-.container{
+.container {
   max-width: 1268px;
   margin: 0px auto;
+}
 
-}
-.content{
-  display: flex;
-  flex: 1 1 auto
-}
 /* CSS RESET */
 html,
 body,
@@ -132,11 +129,9 @@ ul,
 li,
 a {
   text-decoration: none;
-
 }
 body {
   line-height: 1;
-
 }
 ol,
 ul {

@@ -1,0 +1,51 @@
+.featured-products {
+    font-family: 'Monsterrat';
+    background: var(--secondary-color);
+    color: white;
+    padding: 70px 0;
+}
+.featured-products-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured-products-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.featured-products__title {
+    color:black;
+    font-weight: 600;
+    font-size: 60px;
+}
+.featured-products__image {
+    padding: 30px 0;
+}
+.featured-products__price {
+    font-weight: 600;
+    font-size: 30px;
+}
+.featured-products-subtitle {
+}
+.featured-products_subtitle-title {
+    font-weight: 600;
+    font-size: 40px;
+}
+.featured-products_subtitle-subtitle {
+    font-weight: 500;
+    line-height: 35px;
+}
+.featured-products_subtitle-controller {
+}
+.featured-products_subtitle-controller > button {
+    padding: 14px 41px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
