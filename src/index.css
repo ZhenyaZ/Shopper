@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+* {
+  font-family: 'Montserrat';
+}
 :root {
   --primary-color: #10b981;
   --secondary-color: #845ec2;
@@ -22,7 +24,14 @@
   max-width: 1268px;
   margin: 0px auto;
 }
-
+.button-stylized > button {
+  padding: 14px 41px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 /* CSS RESET */
 html,
 body,

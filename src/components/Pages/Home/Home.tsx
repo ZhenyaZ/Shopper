@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Home.module.css';
 import productImg from '../../../assets/product.png';
 import FeaturedProducts from './FeaturedProducts/FeaturedProducts';
+import TopSellers from './TopSellers/TopSellers';
 function Home() {
   return (
     <>
@@ -14,7 +15,7 @@ function Home() {
                 Latest Products
               </div>
               <div className={styles['home-latest__products-subTitle']}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.  Dignissimos aut in nulla corrupti ipsa magni
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aut in nulla corrupti ipsa magni
                 voluptatem ipsum, nisi amet delectus?
               </div>
               <div className={styles['home-latest__products-controller']}>
@@ -28,6 +29,7 @@ function Home() {
         </div>
       </main>
       <FeaturedProducts />
+      <TopSellers />
     </>
   );
 }
