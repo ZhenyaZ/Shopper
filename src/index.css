@@ -32,6 +32,26 @@
   border-radius: 5px;
   cursor: pointer;
 }
+/* MEDIA QUERIES */
+/*--DESKTOP--*/
+@media (max-width: 1268px) {
+  .container {
+    max-width: 1268px;
+  }
+}
+/*--TABLET--*/
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 20px;
+  }
+}
+/*--MOBILE--*/
+@media (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
 /* CSS RESET */
 html,
 body,

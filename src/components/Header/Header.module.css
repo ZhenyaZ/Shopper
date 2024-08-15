@@ -78,3 +78,32 @@
   padding: 28px 75px;
   cursor: pointer;
 }
+
+/* MEDIA QUERIES */
+/*--TABLET--*/
+@media (max-width: 768px) {
+  .header-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-content > div {
+    padding: 20px 0px;
+  }
+  .header-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-item > ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+/*--MOBILE--*/
+@media (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}

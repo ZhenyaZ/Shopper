@@ -62,3 +62,19 @@
 }
 .footer-nav__help {
 }
+
+/* MEDIA QUERIES */
+/*--TABLET--*/
+@media (max-width: 768px) {
+  .footer-nav{
+    font-size: small;
+    flex-wrap: wrap;
+  }
+
+}
+/*--MOBILE--*/
+@media (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}

@@ -29,8 +29,7 @@
   font-weight: 600;
   font-size: 30px;
 }
-.featured-products-subtitle {
-}
+.featured-products-subtitle{}
 .featured-products_subtitle-title {
   font-weight: 600;
   font-size: 40px;
@@ -39,5 +38,23 @@
   font-weight: 500;
   line-height: 35px;
 }
-.featured-products_subtitle-controller {
+
+/* MEDIA QUERIES */
+/*--TABLET--*/
+@media (max-width: 768px) {
+  .footer-nav{
+    font-size: small;
+    flex-wrap: wrap;
+  }
+
+}
+/*--MOBILE--*/
+@media (max-width: 480px) {
+  .featured-products-content{
+    flex-direction: column;
+    text-align: center;
+  }
+  .featured-products-product{
+    padding: 20px 0;
+  }
 }
