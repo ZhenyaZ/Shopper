@@ -1,16 +1,21 @@
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Pages/Home/Home';
+import RootLayout from './components/Layouts/RootLayout';
+import Products from './components/Pages/Products/Products';
 
 function App() {
   return (
-    <div className="wrapper">
-      <Header />
-      <div className="content">
-        <Home />
-      </div>
-      <Footer />
-    </div>
+    <>
+    <Router>
+      <Routes>
+        <Route element={<RootLayout/>}>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/product' element={<Products/>}/>
+        </Route>
+      </Routes>
+    </Router>
+    </>
+    
   );
 }
 
