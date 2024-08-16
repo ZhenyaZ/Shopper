@@ -4,6 +4,7 @@
   padding: 30px 25px;
   background: #ecfef4;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .card__description {
   display: flex;
@@ -15,9 +16,9 @@
   background: #ffff;
   border-radius: 15px;
 }
-.card__controller{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
+.card__controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }

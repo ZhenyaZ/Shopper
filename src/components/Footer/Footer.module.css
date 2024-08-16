@@ -66,11 +66,10 @@
 /* MEDIA QUERIES */
 /*--TABLET--*/
 @media (max-width: 768px) {
-  .footer-nav{
+  .footer-nav {
     font-size: small;
     flex-wrap: wrap;
   }
-
 }
 /*--MOBILE--*/
 @media (max-width: 480px) {

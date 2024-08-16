@@ -1,15 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 interface ContainerProps {
-    children: React.ReactNode;
-  }
-
-function Container(props: ContainerProps) {
-  return (
-    <div className='wrapper'>
-        {props.children}
-    </div>
-  )
+  children: React.ReactNode;
 }
 
-export default Container
+function Container(props: ContainerProps) {
+  return <div className="wrapper">{props.children}</div>;
+}
+
+export default Container;

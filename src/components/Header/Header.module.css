@@ -89,17 +89,16 @@
   .header-content > div {
     padding: 20px 0px;
   }
-  .header-search{
+  .header-search {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .nav-item > ul{
+  .nav-item > ul {
     display: flex;
     flex-direction: column;
   }
-
 }
 /*--MOBILE--*/
 @media (max-width: 480px) {

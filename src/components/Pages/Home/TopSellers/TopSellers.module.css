@@ -1,22 +1,21 @@
+.top-sellers-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top-sellers__title {
+  font-weight: 600;
+  font-family: 'Montserrat';
+  font-size: 40px;
+}
+.top-sellers__products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
 
-.top-sellers-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.top-sellers__title{
-    font-weight: 600;
-    font-family: 'Montserrat';
-    font-size: 40px;
-}
-.top-sellers__products{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.top-sellers__products-card-description > p{
-    font-weight: 600;
+.top-sellers__products-card-description > p {
+  font-weight: 600;
 }

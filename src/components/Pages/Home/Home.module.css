@@ -45,18 +45,16 @@
   box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
 }
 
-
 /* MEDIA QUERIES */
 /*--TABLET--*/
 @media (max-width: 768px) {
-  .home-latest__products{
+  .home-latest__products {
     flex-direction: column;
   }
-
 }
 /*--MOBILE--*/
 @media (max-width: 480px) {
-  .home-latest__products{
+  .home-latest__products {
     flex-direction: column;
   }
 }
