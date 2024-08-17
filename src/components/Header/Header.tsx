@@ -20,7 +20,7 @@ function Header() {
           <button>0 items added</button>
         </div>
         <div className={styles['header-login']}>
-          <button>Login or Sign Up</button>
+          <button><Link to="/auth">Login or Sign Up</Link></button>
         </div>
       </div>
       <nav className={styles.nav}>

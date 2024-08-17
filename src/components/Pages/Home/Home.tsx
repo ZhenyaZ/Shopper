@@ -18,7 +18,7 @@ function Home() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aut in nulla corrupti ipsa magni
                 voluptatem ipsum, nisi amet delectus?
               </div>
-              <div className={styles['home-latest__products-controller']}>
+              <div className={`${styles['home-latest__products-controller']} button-stylized`}>
                 <button>Buy now</button>
               </div>
             </div>

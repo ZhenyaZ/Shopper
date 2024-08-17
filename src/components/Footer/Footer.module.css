@@ -70,10 +70,16 @@
     font-size: small;
     flex-wrap: wrap;
   }
+  .footer{
+    padding: 50px;
+  }
 }
 /*--MOBILE--*/
 @media (max-width: 480px) {
   .container {
     max-width: 480px;
+  }
+  .footer{
+    padding: 50px;
   }
 }

@@ -1,0 +1,31 @@
+.auth {
+}
+.auth-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+.auth-content__title {
+}
+.auth-content__choiceAuth {
+    
+}
+.auth-content__choiceAuth__signin {
+    padding: 40px;
+}
+.auth-content__choiceAuth__signin__description {
+    line-height: 50px;
+}
+.auth-content__choiceAuth__signin__link {
+}
+.auth-content__choiceAuth__signup {
+
+}
+.auth-content__choiceAuth__signup__description {
+    line-height: 50px;
+}
+.auth-content__choiceAuth__signup__link {
+}

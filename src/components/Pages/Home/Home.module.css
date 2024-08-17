@@ -27,15 +27,7 @@
 .home-latest__products-controller {
   padding: 50px 0 0 0;
 }
-.home-latest__products-controller > button {
-  padding: 14px 41px;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
-}
+
 .home-latest__products-image {
   display: flex;
   justify-content: right;
