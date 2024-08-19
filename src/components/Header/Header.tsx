@@ -8,13 +8,13 @@ import { Logout } from '../../api/logout';
 function Header(props: AuthProps) {
   const navigate = useNavigate();
   const onLogoutHandler = () => {
-    if(props.isAuth){
+    if (props.isAuth) {
       props.setIsAuth!(false);
       props.setUser!({} as LoginUser);
       Logout();
       navigate('/');
     }
-  }
+  };
   const link = props.isAuth ? '/profile' : '/auth';
   return (
     <header className={`${styles['header']}  `}>
@@ -36,12 +36,12 @@ function Header(props: AuthProps) {
         <div className={styles['header-login']}>
           {props.isAuth ? (
             <>
-            <button>
-              <Link to={link}>Profile</Link>
-            </button>
-            <button onClick={onLogoutHandler}>
-              <Link to={link}>Logout</Link>
-            </button>
+              <button>
+                <Link to={link}>Profile</Link>
+              </button>
+              <button onClick={onLogoutHandler}>
+                <Link to={link}>Logout</Link>
+              </button>
             </>
           ) : (
             <button>

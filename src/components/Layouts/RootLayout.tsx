@@ -8,7 +8,7 @@ import AuthProps from '../../types/Props';
 function RootLayout(props: AuthProps) {
   return (
     <Container>
-      <Header isAuth={props.isAuth} setIsAuth={props.setIsAuth} setUser={props.setUser}/>
+      <Header isAuth={props.isAuth} setIsAuth={props.setIsAuth} setUser={props.setUser} />
       <div className="content">
         <Outlet />
       </div>

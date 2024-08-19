@@ -1,0 +1,45 @@
+.form-controllers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.labels {
+  display: inline-block;
+  width: 100px;
+}
+.form-controllers__login > input {
+  padding: 20px 100px 20px 32px;
+  outline: none;
+}
+.form-controllers__password > input {
+  padding: 20px 100px 20px 32px;
+  outline: none;
+}
+.form-controllers__name > input {
+  padding: 20px 100px 20px 32px;
+  outline: none;
+}
+.form-controllers__email > input {
+  padding: 20px 100px 20px 32px;
+  outline: none;
+}
+.form-controllers__password__description {
+  padding: 20px 0 20px 0;
+  font-size: small;
+}
+
+.valid-input {
+  border: 1px solid green;
+}
+.invalid-input {
+  border: 1px solid red;
+}
+
+.form-controllers__signin > button[disabled] {
+  background-color: grey;
+  cursor: not-allowed;
+}
+.form-controllers__signin > button[disabled]:hover {
+  background-color: red;
+}

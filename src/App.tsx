@@ -18,7 +18,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route element={<RootLayout isAuth={isAuth} setIsAuth={setIsAuth} setUser={setUser}/>}>
+          <Route element={<RootLayout isAuth={isAuth} setIsAuth={setIsAuth} setUser={setUser} />}>
             <Route path="/" element={<Home />} />
             <Route path="/product" element={<Products />} />
             <Route path="/blog" element={<Blog />} />
