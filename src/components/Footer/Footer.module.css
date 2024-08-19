@@ -70,7 +70,7 @@
     font-size: small;
     flex-wrap: wrap;
   }
-  .footer{
+  .footer {
     padding: 50px;
   }
 }
@@ -79,7 +79,7 @@
   .container {
     max-width: 480px;
   }
-  .footer{
+  .footer {
     padding: 50px;
   }
 }

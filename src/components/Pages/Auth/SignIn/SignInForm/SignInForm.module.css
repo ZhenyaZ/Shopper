@@ -1,0 +1,16 @@
+.form-controllers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.labels {
+  display: inline-block;
+  width: 100px;
+}
+.form-controllers__login > input {
+  padding: 20px 100px 20px 32px;
+}
+.form-controllers__password > input {
+  padding: 20px 100px 20px 32px;
+}

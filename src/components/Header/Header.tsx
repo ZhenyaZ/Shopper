@@ -1,7 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
-function Header() {
+import AuthProps from '../../types/Props';
+import { LoginUser } from '../../types/User';
+import { Logout } from '../../api/logout';
+function Header(props: AuthProps) {
+  const navigate = useNavigate();
+  const onLogoutHandler = () => {
+    if(props.isAuth){
+      props.setIsAuth!(false);
+      props.setUser!({} as LoginUser);
+      Logout();
+      navigate('/');
+    }
+  }
+  const link = props.isAuth ? '/profile' : '/auth';
   return (
     <header className={`${styles['header']}  `}>
       <div className={`${styles['header-content']} container`}>
@@ -20,7 +34,20 @@ function Header() {
           <button>0 items added</button>
         </div>
         <div className={styles['header-login']}>
-          <button><Link to="/auth">Login or Sign Up</Link></button>
+          {props.isAuth ? (
+            <>
+            <button>
+              <Link to={link}>Profile</Link>
+            </button>
+            <button onClick={onLogoutHandler}>
+              <Link to={link}>Logout</Link>
+            </button>
+            </>
+          ) : (
+            <button>
+              <Link to="/auth">Sign In / Sign Up</Link>
+            </button>
+          )}
         </div>
       </div>
       <nav className={styles.nav}>

@@ -39,6 +39,17 @@
     rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
+.formattedLabel {
+  display: inline-block;
+  width: 100px;
+  font-weight: 500;
+  font-size: 18px;
+}
+input {
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 10px;
+}
 /* MEDIA QUERIES */
 /*--DESKTOP--*/
 @media (max-width: 1268px) {
