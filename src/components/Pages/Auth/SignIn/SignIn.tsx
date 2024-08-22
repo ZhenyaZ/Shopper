@@ -1,7 +1,7 @@
 import React from 'react';
 import SignInForm from './SignInForm/SignInForm';
 import style from './SignIn.module.css';
-import AuthProps from '../../../../types/Props';
+import { AuthProps } from '../../../../types/Props';
 
 function SignIn(props: AuthProps) {
   return (

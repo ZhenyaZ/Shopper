@@ -5,6 +5,7 @@
   background: #ecfef4;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  align-items: center;
 }
 .card__description {
   display: flex;
@@ -18,7 +19,18 @@
 }
 .card__controller {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+}
+.card__controller > button {
+  margin: 10px;
+}
+
+.card > img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
