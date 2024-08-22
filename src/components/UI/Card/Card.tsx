@@ -4,6 +4,7 @@ interface CardProps {
   image: string;
   title: string;
   price: number;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 function Card(props: CardProps) {
   const { image, title, price } = props;
@@ -16,6 +17,7 @@ function Card(props: CardProps) {
       </div>
       <div className={`${styles['card__controller']} button-stylized`}>
         <button>Add to cart</button>
+        <button onClick={props.onClick}>Details</button>
       </div>
     </div>
   );

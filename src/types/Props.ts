@@ -1,3 +1,4 @@
+import Product from './Products';
 import { LoginUser } from './User';
 interface AuthProps {
   isAuth?: boolean;
@@ -5,5 +6,11 @@ interface AuthProps {
   setUser?: React.Dispatch<React.SetStateAction<LoginUser>>;
   user?: LoginUser;
 }
+interface LayoutsProps extends Required<AuthProps> {
+  products: Product[];
+}
+interface ProductsProps {
+  products: Product[];
+}
 
-export default AuthProps;
+export type { AuthProps, ProductsProps, LayoutsProps };

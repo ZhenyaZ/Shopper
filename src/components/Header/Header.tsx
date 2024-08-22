@@ -2,11 +2,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
-import AuthProps from '../../types/Props';
+import { LayoutsProps } from '../../types/Props';
 import { LoginUser } from '../../types/User';
 import { Logout } from '../../api/logout';
-function Header(props: AuthProps) {
+import SearchBar from './SearchBar/SearchBar';
+function Header(props: LayoutsProps) {
   const navigate = useNavigate();
+
   const onLogoutHandler = () => {
     if (props.isAuth) {
       props.setIsAuth!(false);
@@ -16,6 +18,7 @@ function Header(props: AuthProps) {
     }
   };
   const link = props.isAuth ? '/profile' : '/auth';
+
   return (
     <header className={`${styles['header']}  `}>
       <div className={`${styles['header-content']} container`}>
@@ -26,10 +29,7 @@ function Header(props: AuthProps) {
             </Link>
           </span>
         </div>
-        <div className={styles['header-search']}>
-          <input type="search" placeholder="Search items" />
-          <button>Search</button>
-        </div>
+        <SearchBar products={props.products} />
         <div className={styles['header-cart']}>
           <button>0 items added</button>
         </div>

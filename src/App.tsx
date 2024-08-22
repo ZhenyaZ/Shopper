@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Home from './components/Pages/Home/Home';
 import RootLayout from './components/Layouts/RootLayout';
 import Products from './components/Pages/Products/Products';
@@ -10,17 +10,28 @@ import SignIn from './components/Pages/Auth/SignIn/SignIn';
 import SignUp from './components/Pages/Auth/SignUp/SignUp';
 import Profile from './components/Pages/Profile/Profile';
 import { LoginUser } from './types/User';
+import { getProducts } from './api/products';
+import Product from './types/Products';
+import ProductDetail from './components/Pages/Products/ProductDetail/ProductDetail';
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
   const [user, setUser] = useState<LoginUser>({} as LoginUser);
+  const [products, setProducts] = useState([] as Product[]);
+  useEffect(() => {
+    getProducts().then((data) => setProducts(data));
+  }, []);
   return (
     <>
       <Router>
         <Routes>
-          <Route element={<RootLayout isAuth={isAuth} setIsAuth={setIsAuth} setUser={setUser} />}>
+          <Route
+            element={
+              <RootLayout user={user} isAuth={isAuth} setIsAuth={setIsAuth} setUser={setUser} products={products} />
+            }>
             <Route path="/" element={<Home />} />
-            <Route path="/product" element={<Products />} />
+            <Route path="/product" element={<Products products={products} />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/about" element={<About />} />
             {!isAuth ? (

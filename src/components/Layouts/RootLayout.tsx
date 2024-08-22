@@ -3,12 +3,18 @@ import Container from './Container';
 import Header from '../Header/Header';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Footer/Footer';
-import AuthProps from '../../types/Props';
+import { LayoutsProps } from '../../types/Props';
 
-function RootLayout(props: AuthProps) {
+function RootLayout(props: LayoutsProps) {
   return (
     <Container>
-      <Header isAuth={props.isAuth} setIsAuth={props.setIsAuth} setUser={props.setUser} />
+      <Header
+        user={props.user}
+        isAuth={props.isAuth}
+        setIsAuth={props.setIsAuth}
+        setUser={props.setUser}
+        products={props.products}
+      />
       <div className="content">
         <Outlet />
       </div>
