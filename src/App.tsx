@@ -13,6 +13,7 @@ import { LoginUser } from './types/User';
 import { getProducts } from './api/products';
 import Product from './types/Products';
 import ProductDetail from './components/Pages/Products/ProductDetail/ProductDetail';
+import DetailedPost from './components/Pages/Blog/DetailedPost/DetailedPost';
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -33,6 +34,7 @@ function App() {
             <Route path="/product" element={<Products products={products} />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/post/:id" element={<DetailedPost />} />
             <Route path="/about" element={<About />} />
             {!isAuth ? (
               <>
