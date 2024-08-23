@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './TopSellers.module.css';
-import headphonesImg from '../../../../assets/headphones.png';
 import Card from '../../../UI/Card/Card';
+import { getProduct } from '../../../../api/products';
+import { useProductStore } from '../../../../store/ProductStore';
+import { useNavigate } from 'react-router-dom';
 
 function TopSellers() {
+  const navigate = useNavigate();
+  const product = useProductStore((state) => state.products);
+  const addProduct = useProductStore((state) => state.addProduct);
+
+  useEffect(() => {
+    getProduct().then((product) => addProduct(product));
+  }, [addProduct]);
   return (
     <section className={`${styles['top-sellers']}`}>
       <div className={`${styles['top-sellers-content']} container`}>
@@ -11,7 +20,22 @@ function TopSellers() {
           <h1>Top Sellers</h1>
         </div>
         <div className={styles['top-sellers__products']}>
-          <Card image={headphonesImg} title="Boat Rockerz 333" price={20} />
+          {product.length !== 0 ? (
+            product
+              .slice(0, 1)
+              .map((product) => (
+                <Card
+                  key={product._id}
+                  _id={product._id}
+                  image={product.image}
+                  title={product.title}
+                  price={product.price}
+                  onClick={() => navigate(`/product/${product._id}`, { state: { product: product } })}
+                />
+              ))
+          ) : (
+            <span>Loading...</span>
+          )}
         </div>
       </div>
     </section>
