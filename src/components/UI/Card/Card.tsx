@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Card.module.css';
 import useCartStore from '../../../store/CartStore';
+import parser from 'html-react-parser';
 interface CardProps {
   _id: string;
   image: string;
@@ -20,7 +21,7 @@ function Card(props: CardProps) {
     <div className={styles['card']}>
       <img src={image} alt="image" />
       <div className={styles['card__description']}>
-        <h3>{title}</h3>
+        <h3>{parser(title)}</h3>
         <p>$ {price}</p>
       </div>
       <div className={`${styles['card__controller']} button-stylized`}>
