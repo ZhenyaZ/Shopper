@@ -6,9 +6,11 @@ import { LayoutsProps } from '../../types/Props';
 import { LoginUser } from '../../types/User';
 import { Logout } from '../../api/logout';
 import SearchBar from './SearchBar/SearchBar';
+import useCartStore from '../../store/CartStore';
+import Nav from './NavBar/Nav';
 function Header(props: LayoutsProps) {
   const navigate = useNavigate();
-
+  const cartCount = useCartStore((state) => state.products.length);
   const onLogoutHandler = () => {
     if (props.isAuth) {
       props.setIsAuth!(false);
@@ -31,7 +33,7 @@ function Header(props: LayoutsProps) {
         </div>
         <SearchBar products={props.products} />
         <div className={styles['header-cart']}>
-          <button>0 items added</button>
+          <button onClick={() => navigate('/cart')}>{cartCount} items in cart</button>
         </div>
         <div className={styles['header-login']}>
           {props.isAuth ? (
@@ -50,24 +52,7 @@ function Header(props: LayoutsProps) {
           )}
         </div>
       </div>
-      <nav className={styles.nav}>
-        <div className={`${styles['nav-item']} container`}>
-          <ul>
-            <li>
-              <Link to="/features">Features</Link>
-            </li>
-            <li>
-              <Link to="/product">Products</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <Nav />
     </header>
   );
 }

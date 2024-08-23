@@ -11,7 +11,13 @@ function SearchResult(props: SearchResultProps) {
     <div className={styles['search-result']}>
       {props.products.length !== 0 ? (
         props.products.map((product) => {
-          return <div className={styles['search-result__item']} onClick={()=>navigate(`/product/${product._id}`, {state: {product: product}})}>{product.title}</div>;
+          return (
+            <div
+              className={styles['search-result__item']}
+              onClick={() => navigate(`/product/${product._id}`, { state: { product: product } })}>
+              {product.title}
+            </div>
+          );
         })
       ) : (
         <span></span>

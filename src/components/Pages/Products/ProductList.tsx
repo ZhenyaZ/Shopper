@@ -11,10 +11,11 @@ function ProductList(props: ProductsProps) {
           return (
             <Card
               key={product._id}
+              _id={product._id}
               image={product.image}
               title={product.title}
               price={product.price}
-              onClick={(e) => {
+              onClick={() => {
                 navigate(`/product/${product._id}`, { state: { product: product } });
               }}
             />
