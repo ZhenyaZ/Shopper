@@ -20,8 +20,7 @@ function Cart(props: CartProps) {
         <div className={`${style['cart-footer']} button-stylized`}>
           <p>Total: {products.reduce((total, product) => total + product.price * product.quantity, 0)}$</p>
           <button disabled={!validation}>Checkout</button>
-          {!props.isAuth && <p>Please login to checkout</p>}
-          {!validation && <p>Please add products to cart</p>}
+          {!validation && <p>Please login to checkout or add items to cart</p>}
         </div>
       </div>
     </div>
