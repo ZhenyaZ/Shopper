@@ -8,3 +8,11 @@ export const getProducts = async () => {
     console.log(error);
   }
 };
+export const getProduct = async () => {
+  try {
+    const response = await axios.get('http://localhost:3000/api/getProduct');
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

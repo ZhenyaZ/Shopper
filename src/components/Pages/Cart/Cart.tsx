@@ -9,6 +9,7 @@ interface CartProps {
 
 function Cart(props: CartProps) {
   const products = useCartStore((state) => state.products);
+  const validation = products.length > 0 && props.isAuth;
   return (
     <div className={style.cart}>
       <div className={`${style['cart-content']} container`}>
@@ -18,8 +19,8 @@ function Cart(props: CartProps) {
         <CartItems products={products} />
         <div className={`${style['cart-footer']} button-stylized`}>
           <p>Total: {products.reduce((total, product) => total + product.price * product.quantity, 0)}$</p>
-          <button disabled={!props.isAuth}>Checkout</button>
-          {!props.isAuth && <p>Please login to checkout</p>}
+          <button disabled={!validation}>Checkout</button>
+          {!validation && <p>Please login to checkout or add items to cart</p>}
         </div>
       </div>
     </div>
