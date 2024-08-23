@@ -2,7 +2,7 @@ import Product from './Products';
 import { LoginUser } from './User';
 interface AuthProps {
   isAuth?: boolean;
-  setIsAuth?: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsAuth?: (isAuth: boolean) => void;
   setUser?: React.Dispatch<React.SetStateAction<LoginUser>>;
   user?: LoginUser;
 }

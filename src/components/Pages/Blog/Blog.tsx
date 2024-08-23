@@ -8,10 +8,10 @@ function Blog() {
         <div className={style['blog-content__title']}>
           <h1>Blog</h1>
         </div>
-        <Posts/>
+        <Posts />
       </div>
     </div>
-  )
+  );
 }
 
 export default Blog;

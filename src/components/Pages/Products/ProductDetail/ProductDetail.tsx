@@ -1,8 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './ProductDetail.module.css';
+import useCartStore from '../../../../store/CartStore';
 function ProductDetail() {
   const location = useLocation();
+  const addToCart = useCartStore((state) => state.addProduct);
+
   return (
     <div className={styles['product-detail']}>
       <div className={`${styles['product-detail-content']} container`}>
@@ -20,7 +23,7 @@ function ProductDetail() {
             <p>{location.state.product.description}</p>
           </div>
           <div className={`${styles['product-detail__details-controller']} button-stylized`}>
-            <button>Add to cart</button>
+            <button onClick={() => addToCart(location.state.product)}>Add to cart</button>
           </div>
         </div>
       </div>

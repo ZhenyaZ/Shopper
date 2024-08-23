@@ -1,0 +1,23 @@
+.cart {
+  padding: 20px;
+}
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.cart-title {
+}
+.cart-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .cart-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

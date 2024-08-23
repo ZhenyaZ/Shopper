@@ -14,11 +14,14 @@ import { getProducts } from './api/products';
 import Product from './types/Products';
 import ProductDetail from './components/Pages/Products/ProductDetail/ProductDetail';
 import DetailedPost from './components/Pages/Blog/DetailedPost/DetailedPost';
+import Cart from './components/Pages/Cart/Cart';
+import { useUserStore } from './store/UserStore';
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
   const [user, setUser] = useState<LoginUser>({} as LoginUser);
   const [products, setProducts] = useState([] as Product[]);
+  const isAuth = useUserStore((state) => state.isAuth);
+  const setIsAuth = useUserStore((state) => state.setIsAuth);
   useEffect(() => {
     getProducts().then((data) => setProducts(data));
   }, []);
@@ -36,6 +39,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/post/:id" element={<DetailedPost />} />
             <Route path="/about" element={<About />} />
+            <Route path="/Cart" element={<Cart isAuth={isAuth} />} />
             {!isAuth ? (
               <>
                 <Route path="/auth" element={<Auth />} />
