@@ -1,10 +1,8 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
 import styles from './Profile.module.css';
+import { useUserStore } from '../../../store/UserStore';
 
 function Profile() {
-  const location = useLocation();
-  const { _id, login, name, email } = location.state.user;
+  const {login, name, email } = useUserStore((state) => state.data);
 
   return (
     <div className={styles.profile}>

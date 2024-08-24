@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
-import { LoginUser } from '../../types/User';
 import { Logout } from '../../api/logout';
 import SearchBar from './SearchBar/SearchBar';
 import useCartStore from '../../store/CartStore';
@@ -18,7 +17,7 @@ function Header() {
   const onLogoutHandler = () => {
     if (isAuth) {
       setAuth!(false);
-      setUser!({} as LoginUser);
+      setUser( {_id: '', login: '', name: '', email: ''} );
       Logout();
       navigate('/');
     }
