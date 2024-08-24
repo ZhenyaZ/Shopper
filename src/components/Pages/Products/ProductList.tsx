@@ -1,13 +1,16 @@
 import Card from '../../UI/Card/Card';
 import { ProductsProps } from '../../../types/Props';
 import { useNavigate } from 'react-router-dom';
+import Product from '../../../types/Products';
 
-function ProductList(props: ProductsProps) {
+function ProductList({ productsProp }: ProductsProps) {
   const navigate = useNavigate();
+  const [products] = productsProp;
+
   return (
     <>
-      {props.products.length !== 0 ? (
-        props.products.map((product) => {
+      {products.length !== 0 ? (
+        products.map((product) => {
           return (
             <Card
               key={product._id}

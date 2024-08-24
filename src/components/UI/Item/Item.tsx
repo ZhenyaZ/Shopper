@@ -1,4 +1,4 @@
-import React from 'react';
+import parser from 'html-react-parser';
 import styles from './Item.module.css';
 import useCartStore, { ProductState } from '../../../store/CartStore';
 
@@ -26,7 +26,7 @@ function Item(props: ItemProps) {
           <img src={props.product.image} alt="image" />
         </div>
         <div className={styles['item-description']}>
-          <h3>{props.product.title}</h3>
+          <h3>{parser(props.product.title)}</h3>
           <p>${props.product.price}</p>
         </div>
         <div className={styles['item-quantity']}>

@@ -11,7 +11,10 @@ interface CardProps {
 }
 
 function Card(props: CardProps) {
+  console.log(props);
+
   const { image, title, price } = props;
+
   const addProduct = useCartStore((state) => state.addProduct);
   const addToCart = (e: React.MouseEvent<HTMLButtonElement>, product: CardProps) => {
     e.preventDefault();

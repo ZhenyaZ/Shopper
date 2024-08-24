@@ -6,7 +6,10 @@ interface RegisterUser {
 }
 
 interface LoginUser {
+  _id: string;
   login: string;
+  name: string;
+  email: string;
   password: string;
 }
 export type { RegisterUser, LoginUser };

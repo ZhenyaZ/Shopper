@@ -7,6 +7,7 @@ interface AuthProps {
   user?: LoginUser;
 }
 interface LayoutsProps extends Required<AuthProps> {
+  isAuth: boolean;
   products: Product[];
 }
 interface ProductsProps {
