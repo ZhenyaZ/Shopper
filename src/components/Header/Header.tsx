@@ -1,25 +1,29 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
-import { LayoutsProps } from '../../types/Props';
 import { LoginUser } from '../../types/User';
 import { Logout } from '../../api/logout';
 import SearchBar from './SearchBar/SearchBar';
 import useCartStore from '../../store/CartStore';
 import Nav from './NavBar/Nav';
-function Header(props: LayoutsProps) {
+import { useUserStore } from '../../store/UserStore';
+
+function Header() {
   const navigate = useNavigate();
   const cartCount = useCartStore((state) => state.products.length);
+  const isAuth = useUserStore((state) => state.isAuth);
+  const user = useUserStore((state) => state.data);
+  const setAuth = useUserStore((state) => state.setIsAuth);
+  const setUser = useUserStore((state) => state.setUser);
   const onLogoutHandler = () => {
-    if (props.isAuth) {
-      props.setIsAuth!(false);
-      props.setUser!({} as LoginUser);
+    if (isAuth) {
+      setAuth!(false);
+      setUser!({} as LoginUser);
       Logout();
       navigate('/');
     }
   };
-  const link = props.isAuth ? '/profile' : '/auth';
+  const link = isAuth ? `/profile/${user._id}` : '/auth';
 
   return (
     <header className={`${styles['header']}  `}>
@@ -31,12 +35,12 @@ function Header(props: LayoutsProps) {
             </Link>
           </span>
         </div>
-        <SearchBar products={props.products} />
+        <SearchBar />
         <div className={styles['header-cart']}>
           <button onClick={() => navigate('/cart')}>{cartCount} items in cart</button>
         </div>
         <div className={styles['header-login']}>
-          {props.isAuth ? (
+          {isAuth ? (
             <>
               <button>
                 <Link to={link}>Profile</Link>

@@ -1,13 +1,14 @@
 import styles from './Products.module.css';
 import ProductList from './ProductList';
-import { ProductsProps } from '../../../types/Props';
+import { useProductStore } from '../../../store/ProductStore';
 
-function Products(props: ProductsProps) {
+function Products() {
+  const products = useProductStore((state) => state.products);
   return (
     <section className={styles.products}>
       <div className={`${styles['products-content']} container`}>
         <div className={styles['products-products-list']}>
-          <ProductList products={props.products} />
+          <ProductList productsProp={products} />
         </div>
       </div>
     </section>

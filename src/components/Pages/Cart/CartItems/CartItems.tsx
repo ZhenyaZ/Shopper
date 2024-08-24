@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './CartItems.module.css';
 import Item from '../../../UI/Item/Item';
 import { ProductState } from '../../../../store/CartStore';

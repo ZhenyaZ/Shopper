@@ -1,18 +1,13 @@
-import React, { useEffect } from 'react';
 import styles from './TopSellers.module.css';
 import Card from '../../../UI/Card/Card';
-import { getProduct } from '../../../../api/products';
 import { useProductStore } from '../../../../store/ProductStore';
 import { useNavigate } from 'react-router-dom';
 
 function TopSellers() {
   const navigate = useNavigate();
-  const product = useProductStore((state) => state.products);
-  const addProduct = useProductStore((state) => state.addProduct);
+  const product = useProductStore((state) => state.topProduct);
+  console.log(product);
 
-  useEffect(() => {
-    getProduct().then((product) => addProduct(product));
-  }, [addProduct]);
   return (
     <section className={`${styles['top-sellers']}`}>
       <div className={`${styles['top-sellers-content']} container`}>

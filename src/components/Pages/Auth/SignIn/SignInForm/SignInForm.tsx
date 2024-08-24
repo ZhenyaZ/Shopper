@@ -1,13 +1,19 @@
 import React from 'react';
 import style from './SignInForm.module.css';
-import AuthProps from '../../../../../types/Props';
 import { useNavigate } from 'react-router-dom';
 import { SignIn } from '../../../../../api/auth';
+import { useUserStore } from '../../../../../store/UserStore';
 
 type responseType = {
   data: {
-    data: { message: string };
+    message: string;
     status: number;
+    data: {
+      _id: string;
+      login: string;
+      name: string;
+      email: string;
+    };
   };
   status: number;
   response?: {
@@ -16,11 +22,13 @@ type responseType = {
   };
 };
 
-function SignInForm(props: AuthProps) {
+function SignInForm() {
   const navigate = useNavigate();
   const [login, setLogin] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [message, setMessage] = React.useState<{ message: string }>({} as { message: string });
+  const setAuth = useUserStore((state) => state.setIsAuth);
+  const setUser = useUserStore((state) => state.setUser);
 
   const onAuthHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -29,10 +37,10 @@ function SignInForm(props: AuthProps) {
       if (response.response) {
         setMessage(response.response.data);
       } else {
-        setMessage(response.data);
-        navigate('/profile');
-        props.setIsAuth!(true);
-        props.setUser!({ login: login, password: '' });
+        setAuth(true);
+        setUser(response.data.data);
+        setMessage(response.data.message);
+        navigate(`/profile/${response.data.data._id}`, { state: { user: response.data.data } });
       }
     });
   };

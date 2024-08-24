@@ -1,4 +1,3 @@
-import React from 'react';
 import style from './Cart.module.css';
 import CartItems from './CartItems/CartItems';
 import useCartStore from '../../../store/CartStore';
