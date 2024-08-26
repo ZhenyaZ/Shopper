@@ -7,7 +7,7 @@ interface SearchResultProps {
 }
 function SearchResult(props: SearchResultProps) {
   const navigate = useNavigate();
-  
+
   return (
     <div className={styles['search-result']}>
       {props.products.length !== 0 ? (

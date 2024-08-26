@@ -14,6 +14,7 @@ interface CartState {
   removeProduct: (_id: string) => void;
   increaseQuantity: (_id: string) => void;
   decreaseQuantity: (_id: string) => void;
+  clearCart: () => void;
 }
 
 const useCartStore = create<CartState>()(
@@ -58,6 +59,10 @@ const useCartStore = create<CartState>()(
             return { products: state.products.filter((prod) => prod._id !== _id) };
           }
         });
+      },
+      clearCart() {
+        set(() => ({ products: [] }));
+        set(() => ({ total: 0 }));
       },
       setTotal(total) {
         set(() => ({ total: total }));

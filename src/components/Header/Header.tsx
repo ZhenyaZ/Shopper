@@ -17,7 +17,7 @@ function Header() {
   const onLogoutHandler = () => {
     if (isAuth) {
       setAuth!(false);
-      setUser( {_id: '', login: '', name: '', email: ''} );
+      setUser({ _id: '', login: '', name: '', email: '' });
       Logout();
       navigate('/');
     }

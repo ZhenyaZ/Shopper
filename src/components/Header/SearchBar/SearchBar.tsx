@@ -8,7 +8,7 @@ function SearchBar() {
   const [searchQuery, setSearchQuery] = React.useState('');
   const [filteredProducts, setFilteredProducts] = React.useState([] as Product[]);
   const [products] = useProductStore((state) => state.products);
-  
+
   const onSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
     setFilteredProducts(

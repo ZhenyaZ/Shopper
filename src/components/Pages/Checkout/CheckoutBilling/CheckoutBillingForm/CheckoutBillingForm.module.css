@@ -1,0 +1,42 @@
+#required {
+  color: var(--primary-color);
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.checkout-billing__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.checkout-billing__form__fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  width: 50%;
+}
+input {
+  padding: 20px 100px 20px 32px;
+  outline: none;
+}
+.checkout-billing__form__name {
+}
+.checkout-billing__form__email {
+}
+.checkout-billing__form__phone {
+}
+.checkout-billing__form__address {
+}
+.checkout-billing__form__city {
+}
+.checkout-billing__form__country {
+}
+.checkout-billing__form__zip {
+}

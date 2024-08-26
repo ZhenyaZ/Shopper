@@ -5,6 +5,8 @@ import { LoginUser } from '../types/User';
 interface UserState {
   data: LoginUser;
   isAuth: boolean;
+  orders: [];
+
   setUser: (user: Omit<LoginUser, 'password'>) => void;
   setIsAuth: (isAuth: boolean) => void;
 }
@@ -14,6 +16,8 @@ export const useUserStore = create<UserState>()(
     (set) => ({
       data: {} as LoginUser,
       isAuth: false,
+      orders: [],
+
       setUser(user) {
         set((state) => {
           return {
