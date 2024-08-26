@@ -19,7 +19,7 @@ import CheckoutLayout from './components/Pages/Checkout/CheckoutLayout/CheckoutL
 import Checkout from './components/Pages/Checkout/Checkout';
 import OrderSuccess from './components/Pages/Checkout/OrderSuccess/OrderSuccess';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
+import { inject } from '@vercel/analytics';
 export const queryClient = new QueryClient();
 
 function App() {
@@ -30,9 +30,10 @@ function App() {
     getProducts().then((data) => addProduct(data));
     getProduct().then((data) => addTopProduct(data));
   }, []);
-
+  inject();
   return (
     <QueryClientProvider client={queryClient}>
+      
       <Router>
         <Routes>
           <Route element={<RootLayout />}>
