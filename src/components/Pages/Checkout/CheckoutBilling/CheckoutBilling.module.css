@@ -1,0 +1,11 @@
+.checkout-billing__button {
+  display: flex;
+  justify-content: center;
+}
+.checkout-billing__error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 50px;
+}

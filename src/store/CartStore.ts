@@ -8,16 +8,20 @@ export interface ProductState extends Product {
 
 interface CartState {
   products: ProductState[];
+  total: number;
+  setTotal: (total: number) => void;
   addProduct: (product: ProductState) => void;
   removeProduct: (_id: string) => void;
   increaseQuantity: (_id: string) => void;
   decreaseQuantity: (_id: string) => void;
+  clearCart: () => void;
 }
 
 const useCartStore = create<CartState>()(
   persist(
     (set) => ({
       products: [],
+      total: 0,
       addProduct(product: ProductState) {
         set((state) => {
           const existingProduct = state.products.some((p) => p._id === product._id);
@@ -55,6 +59,13 @@ const useCartStore = create<CartState>()(
             return { products: state.products.filter((prod) => prod._id !== _id) };
           }
         });
+      },
+      clearCart() {
+        set(() => ({ products: [] }));
+        set(() => ({ total: 0 }));
+      },
+      setTotal(total) {
+        set(() => ({ total: total }));
       },
     }),
     { name: 'cart storage', storage: createJSONStorage(() => sessionStorage) },

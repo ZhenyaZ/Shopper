@@ -1,0 +1,21 @@
+.profile {
+}
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile__title {
+}
+.profile-user__info {
+}
+.profile-user__info__name {
+}
+.profile-user__info__email {
+}
+.profile__orders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+}

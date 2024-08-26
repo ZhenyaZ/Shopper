@@ -1,0 +1,17 @@
+.orderSuccess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.orderSuccess__title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.orderSuccess__content {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}

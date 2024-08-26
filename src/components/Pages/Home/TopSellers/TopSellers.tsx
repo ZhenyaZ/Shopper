@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 function TopSellers() {
   const navigate = useNavigate();
   const product = useProductStore((state) => state.topProduct);
-  console.log(product);
 
   return (
     <section className={`${styles['top-sellers']}`}>

@@ -7,12 +7,14 @@ interface SearchResultProps {
 }
 function SearchResult(props: SearchResultProps) {
   const navigate = useNavigate();
+
   return (
     <div className={styles['search-result']}>
       {props.products.length !== 0 ? (
         props.products.map((product) => {
           return (
             <div
+              key={product._id}
               className={styles['search-result__item']}
               onClick={() => navigate(`/product/${product._id}`, { state: { product: product } })}>
               {product.title}

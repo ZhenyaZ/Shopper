@@ -15,6 +15,12 @@ import DetailedPost from './components/Pages/Blog/DetailedPost/DetailedPost';
 import Cart from './components/Pages/Cart/Cart';
 import { useUserStore } from './store/UserStore';
 import { useProductStore } from './store/ProductStore';
+import CheckoutLayout from './components/Pages/Checkout/CheckoutLayout/CheckoutLayout';
+import Checkout from './components/Pages/Checkout/Checkout';
+import OrderSuccess from './components/Pages/Checkout/OrderSuccess/OrderSuccess';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+export const queryClient = new QueryClient();
 
 function App() {
   const addProduct = useProductStore((state) => state.addProduct);
@@ -26,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Router>
         <Routes>
           <Route element={<RootLayout />}>
@@ -47,9 +53,13 @@ function App() {
               <Route path="/profile/:id" element={<Profile />} />
             )}
           </Route>
+          <Route element={<CheckoutLayout />}>
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/orderSuccess" element={<OrderSuccess />} />
+          </Route>
         </Routes>
       </Router>
-    </>
+    </QueryClientProvider>
   );
 }
 

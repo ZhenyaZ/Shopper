@@ -1,0 +1,20 @@
+.header {
+  font-weight: 500;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  background: var(--primary-color);
+  padding: 20px 0;
+}
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-name {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-size: 40px;
+}
+.header-name__green {
+  color: var(--tertiary-color);
+}
