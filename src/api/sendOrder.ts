@@ -14,5 +14,5 @@ interface Order {
 }
 
 export const sendOrder = (data: Order) => {
-  return axios.post('http://localhost:3000/api/sendOrder', data);
+  return axios.post(import.meta.env.VITE_SEND_ORDER_URL, data);
 };

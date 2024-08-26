@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../Header.module.css';
 import { Link } from 'react-router-dom';
 function Nav() {
@@ -6,9 +5,6 @@ function Nav() {
     <nav className={styles.nav}>
       <div className={`${styles['nav-item']} container`}>
         <ul>
-          <li>
-            <Link to="/features">Features</Link>
-          </li>
           <li>
             <Link to="/product">Products</Link>
           </li>

@@ -4,6 +4,7 @@ interface Product {
   price: number;
   image: string;
   description?: string;
+  [key: string]: any;
 }
 
 export default Product;

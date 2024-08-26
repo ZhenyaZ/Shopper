@@ -3,12 +3,16 @@ import styles from './SignUpForm.module.css';
 import { SignUp } from '../../../../../api/register';
 import SignUpInput from '../SignUpInput/SignUpInput';
 import { RegisterUser } from '../../../../../types/User';
+
+
+
 function SignUpForm() {
   const [message, setMessage] = React.useState<{ message: string }>({} as { message: string });
 
   const onSignUpHandler = (e: React.MouseEvent<HTMLButtonElement>, data: RegisterUser) => {
     e.preventDefault();
-    SignUp(data).then((response) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    SignUp(data).then((response: any) => {
       if (response.response) {
         setMessage(response.response.data);
       } else {

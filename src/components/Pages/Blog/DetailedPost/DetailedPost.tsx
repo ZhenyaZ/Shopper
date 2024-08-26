@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './DetailedPost.module.css';
 import { useLocation } from 'react-router-dom';
 import parser from 'html-react-parser';

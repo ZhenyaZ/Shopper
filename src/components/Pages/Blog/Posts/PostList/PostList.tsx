@@ -1,4 +1,3 @@
-import React from 'react';
 import Post from '../Post/Post';
 import styles from './PostList.module.css';
 function PostList() {

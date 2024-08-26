@@ -1,4 +1,3 @@
-import React from 'react';
 import style from './Blog.module.css';
 import Posts from './Posts/Posts';
 function Blog() {

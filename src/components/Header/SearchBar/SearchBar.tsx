@@ -12,7 +12,7 @@ function SearchBar() {
   const onSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
     setFilteredProducts(
-      products.filter((product) => {
+      products.filter((product: Product) => {
         return product.title.toLowerCase().includes(searchQuery.toLowerCase());
       }),
     );

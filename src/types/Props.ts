@@ -11,7 +11,7 @@ interface LayoutsProps extends Required<AuthProps> {
   products: Product[];
 }
 interface ProductsProps {
-  products: Product[];
+  productsProp: Product[];
 }
 
 export type { AuthProps, ProductsProps, LayoutsProps };

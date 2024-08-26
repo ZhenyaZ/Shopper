@@ -57,6 +57,10 @@
   color: white;
   cursor: pointer;
 }
+.header-login{
+  display: flex;
+  gap: 10px;
+}
 .header-login > button {
   padding: 9px 8px;
 }
