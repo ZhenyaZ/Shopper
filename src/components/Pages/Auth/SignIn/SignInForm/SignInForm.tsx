@@ -39,7 +39,7 @@ function SignInForm() {
       } else {
         setAuth(true);
         setUser(response.data.data);
-        setMessage(response.data.message);
+        setMessage({message: response.data.message});
         navigate(`/profile/${response.data.data._id}`, { state: { user: response.data.data } });
       }
     });

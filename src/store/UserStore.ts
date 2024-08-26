@@ -6,7 +6,6 @@ interface UserState {
   data: LoginUser;
   isAuth: boolean;
   orders: [];
-
   setUser: (user: Omit<LoginUser, 'password'>) => void;
   setIsAuth: (isAuth: boolean) => void;
 }
@@ -19,14 +18,14 @@ export const useUserStore = create<UserState>()(
       orders: [],
 
       setUser(user) {
-        set((state) => {
+        set(() => {
           return {
-            data: user,
+            data: {...user, password: ''},
           };
         });
       },
       setIsAuth(isAuth) {
-        set((state) => {
+        set(() => {
           return {
             isAuth: isAuth,
           };

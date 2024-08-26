@@ -7,7 +7,7 @@ function Profile() {
   return (
     <div className={styles.profile}>
       <div className={`${styles['profile-content']} container`}>
-        <div className={styles['profile__title']}>Hello {login}</div>
+        <div className={styles['profile__title']}><h1>Hello {login}</h1></div>
         <div className={styles['profile-user__info']}>
           <div className={styles['profile-user__info__name']}>Name: {name}</div>
           <div className={styles['profile-user__info__name']}>Login: {login}</div>

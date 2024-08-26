@@ -1,4 +1,3 @@
-import React from 'react';
 import Product from '../../../types/Products';
 import styles from '../Header.module.css';
 import { useNavigate } from 'react-router-dom';

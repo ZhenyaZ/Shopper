@@ -11,6 +11,6 @@ interface ProductStore {
 export const useProductStore = create<ProductStore>((set) => ({
   products: [],
   topProduct: [],
-  addProduct: (product) => set((state) => ({ products: [product] })),
+  addProduct: (product) => set(() => ({ products: [product] })),
   addTopProduct: (product) => set((state) => ({ topProduct: state.topProduct.concat(product) })),
 }));

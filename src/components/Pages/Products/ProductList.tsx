@@ -10,7 +10,7 @@ function ProductList({ productsProp }: ProductsProps) {
   return (
     <>
       {products.length !== 0 ? (
-        products.map((product) => {
+        products.map((product: Product) => {
           return (
             <Card
               key={product._id}

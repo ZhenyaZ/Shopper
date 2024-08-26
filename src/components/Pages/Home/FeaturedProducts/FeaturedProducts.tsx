@@ -1,4 +1,3 @@
-import React from 'react';
 import airPodImg from '../../../../assets/airpod.png';
 import styles from './FeaturedProducts.module.css';
 function FeaturedProducts() {
@@ -21,9 +20,6 @@ function FeaturedProducts() {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
               Soluta, vitae a. Enim impedit error provident.
             </span>
-          </div>
-          <div className={`${styles['featured-products_subtitle-controller']} button-stylized`}>
-            <button>Add to cart</button>
           </div>
         </div>
       </div>
