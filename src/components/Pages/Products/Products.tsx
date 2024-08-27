@@ -8,7 +8,7 @@ function Products() {
     <section className={styles.products}>
       <div className={`${styles['products-content']} container`}>
         <div className={styles['products-products-list']}>
-          <ProductList productsProp={products} />
+          {products.length > 0 ? <ProductList productsProp={products} /> : <span>Loading...</span>}
         </div>
       </div>
     </section>
